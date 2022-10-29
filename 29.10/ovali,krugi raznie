@@ -1,0 +1,20 @@
+x = 0
+y = 0
+w = 0
+d = 0
+
+def setup():
+    global x,y,w,d
+    size(600,400)
+    frameRate(10)
+    fill(255)
+
+    
+def draw():
+    global x,y,w,d
+    background(0)
+    ellipse(x,y,w,d)
+    x = 300
+    y = 200
+    w = random(0,100)
+    d = random(0,100)
