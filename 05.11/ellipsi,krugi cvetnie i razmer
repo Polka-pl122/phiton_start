@@ -1,0 +1,24 @@
+x1 = 0
+y1 = 0
+x1Change = 0
+y1Change = 0
+w = 0
+d = 0
+
+def setup():
+    global x1,y1,x1Change,y1Change,w,d
+    size(600,400)
+    x1 = 600
+    y1 = 0
+    x1Change = -3
+    y1Change = 2
+
+def draw():
+    global x1,y1,x1Change,y1Change,w,d
+    fill(random(0,256),random(0,256),random(0,256))
+    ellipse(x1,y1,w,d)
+    w = random(0,100)
+    d = random(0,100)
+
+    x1 = x1 + x1Change
+    y1 = y1 + y1Change
