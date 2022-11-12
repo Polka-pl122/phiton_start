@@ -1,0 +1,21 @@
+x = 0 
+y = 0
+xChange = 0
+yChange = 0
+def setup():
+    global x,y,xChange,yChange
+    size(600,600)
+    background(0)
+    stroke(255,255,255)
+
+    
+def draw():
+    global x,y,xChange,yChange
+    x = random(0,600)
+    y = random(0,600)
+    xChange = 0
+    yChange = random(10,30)
+    strokeWeight(random(1,5))
+    x = x + xChange
+    y = y + yChange
+    point(x,y)
