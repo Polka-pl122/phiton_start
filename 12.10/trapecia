@@ -1,0 +1,21 @@
+x = 0
+y = 0
+x1 = 0
+y1 = 0
+x1Change = 0
+y1Change = 0
+def setup():
+    global x,y,x1,y1,x1Change,y1Change
+    size(600,600)
+    x = 500
+    y = 300
+    x1 = 0
+    y1 = 600
+    x1Change = 2
+    y1Change = -2
+def draw():
+    global x,y,x1,y1,x1Change,y1Change
+    x1 = x1 + x1Change
+    y1 = y1 + y1Change
+    strokeWeight(2)
+    line(x,y,x1,y1)
