@@ -1,0 +1,31 @@
+x = 0
+y = 0
+x1 = 0
+y1 = 0
+x2 = 0
+y2 = 0
+xChange = 0
+y1Change = 0
+x2Change = 0
+
+def setup():
+    global x,y,x1,y1,x2,y2,xChange,y1Change,x2Change
+    size(600,600)
+    x = 250
+    y = 350
+    x1 = 300
+    y1 = 300
+    x2 = 350
+    y2 = 350
+    xChange = -10
+    y1Change = -10
+    x2Change = 10
+    frameRate(10)
+
+def draw():
+    global x,y,x1,y1,x2,y2,xChange,y1Change,x2Change
+    background(0)
+    x = x + xChange
+    y1 = y1 + y1Change
+    x2 = x2 + x2Change
+    triangle(x,y,x1,y1,x2,y2)
