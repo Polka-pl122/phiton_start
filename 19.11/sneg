@@ -1,0 +1,107 @@
+x = 0 
+y = 0
+x1 = 0
+y1 = 0
+x2 = 0
+y2 = 0
+x3 = 0
+y3 = 0
+x4 = 0
+y4 = 0
+x5 = 0
+y5 = 0
+x6 = 0
+y6 = 0
+x7 = 0
+y7 = 0
+x8 = 0
+y8 = 0
+x9 = 0
+y9 = 0
+xChange = 0
+yChange = 0
+x1Change = 0
+y1Change = 0
+x2Change = 0
+y2Change = 0
+x3Change = 0
+y3Change = 0
+x4Change = 0
+y4Change = 0
+x5Change = 0
+y5Change = 0
+x6Change = 0
+y6Change = 0
+x7Change = 0
+y7Change = 0
+x8Change = 0
+y8Change = 0
+x9Change = 0
+y9Change = 0
+def setup():
+    global x,y,x1,y1,x2,y2,x3,y3,x4,y4,x5,y5,x6,y6,x7,y7,x8,y8,x9,y9,xChange,yChange,x1Change,y1Change,x2Change,y2Change,x3Change,y3Change,x4Change,y4Change,x5Change,y5Change,x6Change,y6Change,x7Change,y7Change,x8Change,y8Change,x9Change,y9Change
+    size(500,500)
+    stroke(255)
+    strokeWeight(2)
+    x = 50
+    y = 0
+    x1 = 100
+    y1 = 0
+    x2 = 150
+    y2 = 0
+    x3 = 200
+    y3 = 0
+    x6 = 250
+    y6 = 0
+    x7 = 300
+    y7 = 0
+    x8 = 350
+    y8 = 0
+    x9 = 400
+    y9 = 0
+    xChange = 0
+    yChange = 10
+    x1Change = 0
+    y1Change = 10
+    x2Change = 0
+    y2Change = 20
+    x3Change = 0
+    y3Change = 30
+    x4Change = 0
+    y4Change = 50
+    x5Change = 0
+    y5Change = 60
+    x6Change = 0
+    y6Change = 50
+    x7Change = 0
+    y7Change = 30
+    x8Change = 0
+    y8Change = 10
+    x9Change = 0
+    y9Change = 20
+    background(0)
+    frameRate(10)
+
+
+def draw():
+    global x,y,x1,y1,x2,y2,x3,y3,x4,y4,x5,y5,x6,y6,x7,y7,x8,y8,x9,y9,xChange,yChange,x1Change,y1Change,x2Change,y2Change,x3Change,y3Change,x4Change,y4Change,x5Change,y5Change,x6Change,y6Change,x7Change,y7Change,x8Change,y8Change,x9Change,y9Change
+    y = y + yChange
+    y1 = y1 + y1Change
+    y2 = y2 + y2Change
+    y3 = y3 + y3Change 
+    y4 = y4 + y4Change
+    y5 = y5 + y5Change
+    y6 = y6 + y6Change
+    y7 = y7 + y7Change
+    y8 = y8 + y8Change
+    y9 = y9 + y9Change
+    point(x,y)
+    point(x1,y1)
+    point(x2,y2)
+    point(x3,y3)
+    point(x4,y4)
+    point(x5,y5)
+    point(x6,y6)
+    point(x7,y7)
+    point(x8,y8)
+    point(x9,y9)
