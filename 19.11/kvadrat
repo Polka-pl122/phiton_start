@@ -1,0 +1,27 @@
+x = 0
+y = 0
+w = 0
+d = 0
+xChange = 0
+yChange = 0
+wChange = 0
+dChange = 0
+def setup():
+    global x,y,w,d,xChange,yChange,wChange,dChange
+    size(600,600)
+    x = 300
+    y = 300
+    w = 50
+    d = 50
+    xChange = -2
+    yChange = -2
+    wChange = 2
+    dChange = 2
+def draw():
+    global x,y,w,d,xChange,yChange,wChange,dChange
+    background(0)
+    x = x + xChange
+    y = y + yChange
+    w = w + wChange
+    d = d + dChange
+    rect(x,y,w,d)
