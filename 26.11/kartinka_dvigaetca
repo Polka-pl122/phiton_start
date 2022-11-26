@@ -1,0 +1,18 @@
+x = 0
+y = 0
+
+def setup():
+    global x,y
+    size(1000,1000)
+    x = 0
+    y = 0
+
+def draw():
+    global x,y
+    if x != 300:
+        x = x + 1
+    if y != 300:
+        y = y + 1
+    background(160)
+    img = loadImage("mmm.png")
+    image(img,x,y)
