@@ -1,0 +1,29 @@
+x = 0
+y = 0
+w = 0
+d = 0
+xChange = 0
+yChange = 0
+wChange = 0
+dChange = 0
+def setup():
+    global x,y,xChange,yChange,w,d,wChange,dChange
+    size(500,500)
+    x = 250
+    y = 250
+    w = 100
+    d = 100
+    xChange = 0
+    yChange = 0
+    wChange = 2
+    dChange = 2
+
+def draw():
+    global x,y,xChange,yChange,w,d,wChange,dChange
+    background(255)
+    x = x + xChange
+    y = y + yChange
+    w = w + wChange
+    d = d + dChange
+    rectMode(CENTER)
+    rect(x,y,w,d)
