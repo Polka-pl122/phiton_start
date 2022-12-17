@@ -1,0 +1,28 @@
+x = 0
+y = 0
+w = 0
+d = 0
+r = 0
+rChange = 0
+def setup():
+    global x,y,w,d,r,rChange,g,gChange,b,bChange
+    colorMode(HSB)
+    size(600,600)
+    x = 300
+    y = 300
+    w = 100
+    d = 100
+    r = 100
+    rChange = 1
+    g = 100
+    gChange = 1
+    b = 100
+    bChange = 1
+    frameRate(50)
+def draw():
+    global x,y,w,d,r,rChange,g,gChange,b,bChange
+    fill(r,g,b)
+    ellipse(x,y,w,d)
+    r = r + rChange
+    g = g + gChange
+    b = b + bChange
