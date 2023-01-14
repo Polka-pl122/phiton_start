@@ -1,0 +1,14 @@
+angle = 0
+
+def setup():
+    global angle
+    size(600,600)
+    fill(222,255,15)
+    ellipse(300,300,50,50)
+    fill(15,255,69)
+    rect(290,330,20,90)
+def draw():
+    global angle
+    translate(100,100)
+    rotate(radians(angle))
+    ellipse(0,0,30,50)
