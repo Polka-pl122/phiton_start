@@ -1,0 +1,31 @@
+angel = 0
+angel1 = 0
+angel2 = 0
+x = 0
+y = 0
+def setup():
+    global angel,x,y,angel1
+    size(1000,1000)
+    x = 100
+    y = 100
+    frameRate(100)
+def draw():
+    global angel,x,y,angel1,angel2
+    #background(160)
+    push()
+    translate(400,400)
+    rotate(radians(angel))
+    angel+=1
+    push()
+    translate(150,150)
+    rotate(radians(angel1))
+    rect(-50,-50,50,50)
+    angel1+=5
+    pop()
+    push()
+    translate(60,60)
+    rotate(radians(angel2))
+    rect(-20,-20,20,20)
+    angel2+=3
+    pop()
+    pop()
