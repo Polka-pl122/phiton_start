@@ -1,0 +1,24 @@
+x = 0
+y = 0 
+angel = 0
+
+
+def setup():
+    global x,y, angel
+    size(600,600)
+    ugol = 1
+    strokeWeight(0.1)
+
+def draw():
+    global x,y,angel
+    translate(300,300)
+    rotate(radians(angel))
+    fill(random(0,255),random(0,255),random(0,255))
+    ellipse(0,100,100,100)
+    translate(300,350)
+    rotate(radians(0))
+    line(0,0,0,-50)
+    x = x + 1
+    angel = angel + 1
+
+    
