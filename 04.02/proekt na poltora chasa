@@ -1,0 +1,44 @@
+angel = 0
+a = 0
+b = 0
+c = 0
+
+
+def setup():
+    global angel,a,b,c
+    size(600,600)
+    frameRate(100)
+
+
+    
+def draw():
+    global angel,a,b,c
+    background(4,176,209)
+    push()
+    translate(300,600)
+    rotate(radians(angel))
+    fill(33,255,50)
+    ellipse(0,0,500,500)
+    angel = angel + 1
+    pop()
+    push()
+    translate(300,600)
+    rotate(radians(a))
+    fill(246,255,15)
+    ellipse(0,-500,50,50)
+    a = a + 1
+    pop()
+    push()
+    translate(300,600)
+    rotate(radians(b))
+    fill(121,53,0)
+    rect(0,250,10,50)
+    b = b + 1
+    pop()
+    push()
+    translate(300,600)
+    rotate(radians(c))
+    fill(0,121,9)
+    ellipse(5,300,30,30)
+    c = c + 1
+    pop()
