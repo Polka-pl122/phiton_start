@@ -1,0 +1,14 @@
+y = 0
+def setup():
+    global y
+    size(600,600)
+    y = 0
+    frameRate(1000)
+
+def draw():
+    global y 
+    background(160)
+    ellipse(300,y,50,50)
+    y = y + 1
+    if (y == 600):
+        y = y - 1
