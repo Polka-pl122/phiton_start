@@ -1,0 +1,24 @@
+a = 0
+b = 0
+def setup():
+    global a
+    size(600,600)
+    rectMode(CENTER)
+    frameRate(100)
+    
+def draw():
+    global a,b
+    background(160)
+    translate(300,300)
+    rotate(radians(a))
+    scale(b)
+    rect(0,0,100,100)
+    a = a + 10
+    b = b + 0.01
+    if (b == 0.1):
+        b = 0
+        #noLoop()
+        #background(160)
+        #stroke(255, 0, 0)
+        #strokeWeight(400)
+        #point(300, 300)
