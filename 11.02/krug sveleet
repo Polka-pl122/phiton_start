@@ -1,0 +1,15 @@
+a = 0
+
+def setup():
+    global a
+    size(600,600)
+    colorMode(HSB)
+    a = 0
+    frameRate(100)
+def draw():
+    global a
+    fill(100,0,a)
+    ellipse(300,300,300,300)
+    a = a + 1
+    if (a == 250):
+        a = 0
