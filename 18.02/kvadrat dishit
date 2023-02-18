@@ -1,0 +1,30 @@
+w = 0
+d = 0
+lever = 0
+a = 0
+def setup():
+    global w,d,lever,a 
+    size(600,600)
+    w = 100
+    d = 100
+    rectMode(CENTER)
+    frameRate(100)
+    lever = 0
+
+def draw():
+    global w,d,lever,a
+    #background(160)
+    translate(300,300)
+    rotate(radians(a))
+    a = a + 0.1
+    rect(0,0,w,d)
+    if ((w == 400) and (d == 400)):
+        lever = 1
+    if ((w == 99) and (d == 99)):
+        lever = 0
+    if ( lever == 1 ):
+        w = w - 1
+        d = d - 1
+    if (lever == 0):
+        w = w + 1
+        d = d + 1
