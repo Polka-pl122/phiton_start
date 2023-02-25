@@ -1,0 +1,59 @@
+x = 0
+y = 0
+lever = 0
+lever1 = 0
+mode1 = 0
+mode = 0
+def setup():
+    global x,y, lever, lever1
+    size(600,600)
+    lever = 0
+    lever1 = 0
+    frameRate(1000)
+    x = 0
+    y = 0
+
+
+
+def draw():
+    global x,y,lever,lever1,mode1
+    background(160)
+    ellipse(x,y,50,50)
+    if (x == 0):
+        lever = 1
+    if ( lever == 1):
+        x = x + 1
+
+    if (y == 0):
+        lever1 = 1
+        
+    if (lever1 == 1):
+        y = y + 1
+    
+    if (x == 600):
+        lever = 0
+        
+    if (lever == 0):
+        x = x - 1
+    
+    if (y == 600):
+        lever1 = 0
+    
+    if (lever1 == 0):
+        y = y - 1
+    
+    
+def mouseClicked():
+    global mode1
+    if (mouseButton == RIGHT):
+        noLoop()
+    if (mouseButton == LEFT):
+        loop()
+        
+        
+
+
+
+    
+
+    
