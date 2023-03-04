@@ -1,0 +1,25 @@
+x = 0
+y = 0
+mode = 0
+def setup():
+    global x,y,mode
+    size(600,600)
+    x = 300
+    y = 300
+    frameRate(1000)
+def draw():
+    global x,y,mode
+    background(500)
+    ellipse(x,y,40,40)
+    if mode == 0:
+        x = x + 2
+    if mode == 1:
+        x = x - 2
+    if x >= 600 - 20:
+        mode = 1
+    if x <= 0 + 20:
+        mode = 0
+        
+    if (mouseButton == LEFT):
+        x = 300
+        y = 300
