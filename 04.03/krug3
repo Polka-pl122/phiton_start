@@ -1,0 +1,14 @@
+x = 0
+y = 0
+
+def setup():
+    global x,y
+    size(600,600)
+
+    frameRate(1000)
+def draw():
+    global x,y
+    translate(mouseX,mouseY)
+    background(500)
+    ellipse(x,y,40,40)
+    if (mousePressed == True):
