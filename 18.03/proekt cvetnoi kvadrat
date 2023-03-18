@@ -1,0 +1,59 @@
+w = 0
+d = 0
+lever = 0
+a = 0
+x = 0
+lever1 = 0
+def setup():
+    global w,d,lever,a 
+    size(600,600)
+    w = 100
+    d = 100
+    rectMode(CENTER)
+    frameRate(10000)
+    lever = 0
+
+def draw():
+    global w,d,lever,a
+    background(160)
+
+    if(mouseButton == RIGHT):
+        translate(mouseX,mouseY)
+        stroke(random(0,255),random(0,255),random(0,255))
+        fill(random(0,255),random(0,255),random(0,255))
+        translate(0,0)
+        rotate(radians(a))
+        a = a + 1
+        rect(0,0,w,d)
+        if ((w == 400) and (d == 400)):
+            lever = 1
+        if ((w == 99) and (d == 99)):
+            lever = 0
+        if ( lever == 1 ):
+            w = w - 1
+            d = d - 1
+        if (lever == 0):
+            w = w + 1
+            d = d + 1
+    if(mouseButton == LEFT):
+        stroke(random(0,255),random(0,255),random(0,255))
+        fill(random(0,255),random(0,255),random(0,255))
+        translate(300,300)
+        rotate(radians(a))
+        lever = 0
+        x = 0
+        y = 300
+        w = 100
+        d = 100
+        a = a + 1
+        rect(x,y,w,d)
+        if ((w == 400) and (d == 400)):
+            lever = 1
+        if ((w == 99) and (d == 99)):
+            lever = 0
+        if ( lever == 1 ):
+            w = w - 1
+            d = d - 1
+        if (lever == 0):
+            w = w + 1
+            d = d + 1
