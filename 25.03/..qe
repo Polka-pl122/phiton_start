@@ -1,0 +1,39 @@
+x = 0
+y = 0
+w = 0
+d = 0
+x1 = 0
+y1 = 0
+w1 = 0
+d1 = 0
+lever = 0
+def setup():
+    global x,x1,y,y1,w,w1,d,d1,z,lever
+    size(600,600)
+    textSize(20)
+    textAlign(CENTER,CENTER)
+    background(0)
+    x = 180
+    y = 200
+    w = 250
+    d = 130
+    x1 = 310
+    y1 = 85
+    w1 = 100
+    d1 = 50
+    z = 0 
+
+def draw():
+    global x,x1,y,y1,w,w1,d,d1,z,lever
+    rect(x,y,w,d)
+    rect(x1,y1,w1,d1)
+    push()
+    fill(0,255,0)
+    text(u"Кликать сюда", 300,250)
+    text(u"Счёт:",350,100)
+    text(z,390,100)
+    pop()
+def mouseClicked():
+    if ((mouseX > x) and (mouseX < (x + w)) and (mouseY > y) and (mouseY < (y + d))):
+        background(255, 0, 0)
+        z = z + 1
