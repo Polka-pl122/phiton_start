@@ -1,0 +1,28 @@
+z = 0
+x = 0
+y = 0
+myText = 0
+
+def setup():
+    global z,x,y, myText
+    size(600,600)
+    textSize(20)
+    textAlign(CENTER,CENTER)
+    x = 20
+    y = 20
+    myText = u'я люблю супчик'
+
+def draw():
+    global z,x,y,myText
+
+def keyPressed():
+    global z,x,y,myText
+    z = 'b'
+    if (key == ENTER):
+        y = y + 50
+        x = 20
+    elif(key == TAB):
+        x = x + 50
+    else:
+        myText += z
+        text(myText,x,y)
