@@ -1,0 +1,30 @@
+z = 0
+x = 0
+y = 0
+w = 0
+d = 0
+
+def setup():
+    global z,x,y,w,d
+    size(600,600)
+    x = 20
+    y = 20
+    w = 30
+    d = 30
+
+def draw():
+    global z,x,y,w,d
+    ellipse(300,300,w,d)
+
+
+
+def keyPressed():
+    global z,x,y,w,d
+    background(100)
+    if (key == ENTER):
+        w = w + 20
+        d = d + 20
+        
+    if(key == BACKSPACE):
+        w = w - 20
+        d = d - 20
