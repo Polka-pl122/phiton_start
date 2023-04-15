@@ -6,6 +6,7 @@ def setup():
 
 def draw():
     global x,y
+    
     fill(237,219,160)
     rect(190,330,20,40)
     ellipse(200,300,100,110)
