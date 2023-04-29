@@ -1,0 +1,159 @@
+x = 0
+y = 0
+lever = 0
+a = 0
+b = 0
+def setup():
+    global x,y
+    size(800,800)
+    x = 50
+
+def draw():
+    global x,y, lever, a, b
+    translate(x,y)
+    background(255,255,255)
+    fill(67,36,7)
+    ellipse(200,300,130,120)
+    fill(237,219,160)
+    rect(190,330,20,40)
+    ellipse(200,300,100,110)
+    fill(67,66,61)
+    rect(123,360,160,200)
+    fill(137,134,124)
+    ellipse(200,445,130,170)
+    fill(39,37,34)
+    rect(210,500,40,180)
+    rect(150,500,40,180)
+    rect(150,500,100,30)
+    fill(67,66,61)
+    rect(120,360,30,200)
+    rect(252,360,30,200)
+    fill(13,12,9)
+    rect(215,650,30,60)
+    rect(215,690,50,20)
+    rect(155,650,30,60)
+    rect(135,690,50,20)
+    push()
+    strokeWeight(5)
+    line(175,290,175,320)
+    line(220,290,220,320)
+    push()
+    stroke(216,35,35)
+    line(190,330,200,345)
+    line(200,345,210,330)
+    pop()
+    pop()
+    fill(67,36,7)
+    ellipse(200,260,100,50)
+    push()
+    translate(80,500)
+    rotate(radians(210))
+    fill(67,66,61)
+    rect(0,0,30,150)
+    pop()
+    push()
+    translate(60,500)
+    rotate(radians(210))
+    fill(237,219,160)
+    ellipse(0,0,30,25)
+    pop()
+    push()
+    fill(67,66,61)
+    translate(240,368)
+    rotate(radians(330))
+    rect(0,0,30,155)
+    pop()
+    push()
+    fill(237,219,160)
+    translate(335,500)
+    rotate(radians(330))
+    ellipse(0,0,30,25)
+    pop()
+    
+    if (mouseButton == LEFT):
+        lever = 1
+        
+    if (lever == 1 ):
+        x = x + 10
+    
+    if (x == 400):
+        lever = 2
+        
+    if (lever == 2):
+        x = x - 10
+        
+    if ( x == 40):
+        lever = 0
+    if ( lever == 0):
+         x = x + 0
+         
+    if (mouseButton == CENTER):
+        fill(255)
+        stroke(0)
+        ellipse(300,160,170,70)
+        ellipse(250,210,20,20)
+        ellipse(240,230,10,10)
+        fill(0)
+        textSize(25)
+        textAlign(CENTER,CENTER)
+        text(u"Привет!!!",305,160)
+    
+    if(mouseButton == RIGHT):
+        background(random(0,255),random(0,255),random(0,255))
+        fill(random(0,255))
+        ellipse(200,300,130,120)
+        fill(random(0,255))
+        rect(190,330,20,40)
+        ellipse(200,300,100,110)
+        fill(random(0,255))
+        rect(123,360,160,200)
+        fill(random(0,255))
+        ellipse(200,445,130,170)
+        fill(random(0,255))
+        rect(210,500,40,180)
+        rect(150,500,40,180)
+        rect(150,500,100,30)
+        fill(random(0,255))
+        rect(120,360,30,200)
+        rect(252,360,30,200)
+        fill(random(0,255))
+        rect(215,650,30,60)
+        rect(215,690,50,20)
+        rect(155,650,30,60)
+        rect(135,690,50,20)
+        push()
+        strokeWeight(5)
+        line(175,290,175,320)
+        line(220,290,220,320)
+        push()
+        stroke(random(0,255))
+        line(190,330,200,345)
+        line(200,345,210,330)
+        pop()
+        pop()
+        fill(random(0,255))
+        ellipse(200,260,100,50)
+        push()
+        translate(80,500)
+        rotate(radians(210))
+        fill(random(0,255))
+        rect(0,0,30,150)
+        pop()
+        push()
+        translate(60,500)
+        rotate(radians(210))
+        fill(random(0,255))
+        ellipse(0,0,30,25)
+        pop()
+        push()
+        fill(random(0,255))
+        translate(240,368)
+        rotate(radians(330))
+        rect(0,0,30,155)
+        pop()
+        push()
+        fill(random(0,255))
+        translate(335,500)
+        rotate(radians(330))
+        ellipse(0,0,30,25)
+        pop()
